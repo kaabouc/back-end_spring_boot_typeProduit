@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @RequestMapping("/api/produit")
 @RestController
 public class ProduitController {
@@ -30,6 +30,11 @@ public class ProduitController {
     public Produit getProduit(@RequestParam Long id){
         return serviceProduit.getProduit(id);
     }
+    @GetMapping("/getByType")
+    public List<Produit> findByTypeProduitId(@RequestParam Long id){
+        return serviceProduit.findByTypeProduitId(id);
+    }
+
 
 //    @GetMapping("/getpProduitByType/{id}")
 //    public List<Produit> getProduitByTpe(@RequestBody Long id ){

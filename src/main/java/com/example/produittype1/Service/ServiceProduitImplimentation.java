@@ -31,18 +31,14 @@ public class ServiceProduitImplimentation implements  ProduitService {
         return produitRepository.findById(id).get();
     }
 
+    @Override
+    public List<Produit> findByTypeProduitId(Long typeId) {
+        return produitRepository.findByTypeProduitId(typeId);
+    }
+
 //    @Override
-//    public List<Produit> findAllProduitByTypeProduit(TypeProduit typeProduit) {
-//        return produitRepository.findAllProduitByTypeProduit(typeProduit);
+//    public List<Produit> findByTypeProduit(TypeProduit typeProduit) {
+//        return produitRepository.findByTypeProduit(typeProduit);
 //    }
-//
-//    @Override
-//    public List<Produit> findAllProduitByTypeProduit_Id(Long id) {
-//        return produitRepository.findAllProduitByTypeProduit_Id(id);
-//    }
-
-
-
-
 
 }

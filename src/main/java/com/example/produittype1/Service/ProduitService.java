@@ -12,5 +12,7 @@ public interface ProduitService {
 //    List<Produit> findAllProduitByTypeProduit_Id(Long id);
     List<Produit> getAllProduit();
     Produit getProduit(Long id);
+   List<Produit> findByTypeProduitId(Long typeId);
+    //List<Produit> findByTypeProduit(TypeProduit typeProduit);
 
 }
